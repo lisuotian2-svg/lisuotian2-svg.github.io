@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Li 的个人作品集：探索编程、人工智能与数字创作。" />
+  <meta name="theme-color" content="#090d18" />
+  <title>LI — Portfolio | 开发与创造</title>
+  <style>
+    :root{color-scheme:dark;--bg:#090d18;--surface:#121929;--line:#283449;--text:#eff5ff;--muted:#a4b1c7;--cyan:#79ebf5;--purple:#b2a2ff;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}button{font:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
+    .background{position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse 55% 40% at 84% 10%,#38326d63,transparent),radial-gradient(ellipse 55% 45% at 4% 50%,#123d5555,transparent),linear-gradient(#ffffff06 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px);background-size:auto,auto,44px 44px,44px 44px}
+    .container{max-width:var(--max);margin:auto;padding:0 24px}header{position:sticky;top:0;z-index:10;background:#090d18dc;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff12}
+    nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-weight:900;font-size:23px;letter-spacing:-1px}.logo span,.gradient{background:linear-gradient(110deg,var(--cyan),var(--purple));background-clip:text;color:transparent}
+    nav .links{display:flex;gap:26px;align-items:center;font-size:14px;color:var(--muted)}nav .links a:hover,.social:hover{color:var(--cyan)}
+    .hero{padding:125px 0 110px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:50px}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #79ebf543;color:var(--cyan);background:#79ebf50c;border-radius:30px;padding:6px 14px;font-size:13px;font-weight:600}.dot{height:8px;width:8px;border-radius:50%;background:#6ef1bd;box-shadow:0 0 18px #6ef1bd}
+    h1{font-size:clamp(45px,6.7vw,82px);line-height:1.12;letter-spacing:-3px;margin:25px 0 24px}h1 .second{display:block} .lead{font-size:18px;color:var(--muted);max-width:570px}.actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}.btn{border:1px solid var(--line);padding:12px 21px;border-radius:12px;font-weight:700;display:inline-flex;gap:10px;align-items:center;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-3px)}.btn-primary{background:linear-gradient(120deg,var(--cyan),#a4b8ff);color:#06111b;border-color:transparent}.btn-secondary{background:#ffffff08}
+    .orbit{width:min(100%,350px);aspect-ratio:1;position:relative;margin:auto;display:grid;place-items:center}.orbit:before,.orbit:after{content:"";position:absolute;inset:4%;border:1px solid #79ebf54d;border-radius:50%;animation:spin 28s linear infinite}.orbit:after{inset:16%;border-style:dashed;border-color:#b2a2ff55;animation-direction:reverse}.core{font-size:105px;font-weight:900;letter-spacing:-15px;padding-right:15px;color:var(--cyan);text-shadow:0 0 55px #70e7f45e}.satellite{position:absolute;font-size:25px;background:#192238;border:1px solid #425271;padding:12px 18px;border-radius:16px;box-shadow:0 12px 45px #0008}.s1{top:6%;right:6%}.s2{left:0;bottom:20%}.s3{bottom:2%;right:16%}@keyframes spin{to{transform:rotate(360deg)}}
+    section{padding:70px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px}.kicker{font-size:12px;letter-spacing:3px;color:var(--cyan);font-weight:800}.section-head h2{font-size:clamp(28px,4vw,40px);line-height:1.2;letter-spacing:-1px;margin:10px 0 0}.subtitle{color:var(--muted);max-width:550px}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.project{border:1px solid var(--line);background:linear-gradient(145deg,#182136dd,#101725dd);border-radius:20px;overflow:hidden;transition:transform .2s,border-color .2s}.project:hover{transform:translateY(-5px);border-color:#79ebf585}.art{height:185px;display:grid;place-items:center;position:relative;overflow:hidden}.art:before{content:"";position:absolute;inset:0;background:radial-gradient(circle,#ffffff22 1px,transparent 1px);background-size:21px 21px;mask-image:linear-gradient(90deg,transparent,black)}.art span{font-size:64px;filter:drop-shadow(0 12px 22px #0006);z-index:1}.art1{background:linear-gradient(135deg,#2b2a63,#143a56)}.art2{background:linear-gradient(135deg,#15454c,#13243e)}.art3{background:linear-gradient(135deg,#4d2f5a,#1e2845)}.project-body{padding:23px}.label{font-size:11px;border:1px solid #b2a2ff70;border-radius:40px;padding:3px 10px;color:#d1c8ff}.project h3{font-size:21px;margin:14px 0 7px}.project p{margin:0 0 17px;color:var(--muted);font-size:14px;min-height:72px}.tags{display:flex;flex-wrap:wrap;gap:7px}.tags span{font-size:12px;background:#ffffff0a;border:1px solid #ffffff10;border-radius:7px;padding:3px 8px;color:#cad6e7}
+    .skills{display:flex;gap:12px;flex-wrap:wrap}.skill{background:#151e30;border:1px solid var(--line);border-radius:12px;padding:15px 20px;font-weight:700}.skill span{margin-right:9px}.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.about p{color:var(--muted);font-size:17px}.about-visual{border:1px solid #36445c;border-radius:22px;background:linear-gradient(145deg,#18223b,#101626);padding:30px;font-family:ui-monospace,Consolas,monospace;box-shadow:0 26px 70px #0004}.code-line{color:#8fa5c4}.code-line b{color:var(--cyan);font-weight:400}.code-line i{color:#d7b7ff;font-style:normal}
+    .contact{border:1px solid #58708666;border-radius:24px;text-align:center;padding:70px 28px;background:radial-gradient(ellipse at top,#42618b39,transparent 70%),#121929}.contact h2{font-size:38px;margin:0 0 14px}.contact p{color:var(--muted);margin-bottom:26px}footer{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:40px 0;color:var(--muted);font-size:13px}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;padding:80px 0 50px}.orbit{display:none}.projects{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.section-head{display:block}.hero h1{letter-spacing:-2px}}
+    @media(max-width:590px){nav .links{gap:14px;font-size:12px}.container{padding:0 18px}.hero{padding-top:72px}h1{font-size:45px}.projects{grid-template-columns:1fr}.art{height:170px}.project p{min-height:0}.contact h2{font-size:29px}section{padding:52px 0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="background" aria-hidden="true"></div>
+  <header><nav class="container" aria-label="主导航">
+    <a class="logo" href="#home" aria-label="返回首页">LI<span>.</span>DEV</a>
+    <div class="links"><a href="#projects">作品</a><a href="#skills">技能</a><a href="#about">关于</a><a href="#contact">联系</a></div>
+  </nav></header>
+  <main>
+    <div class="container" id="home"><div class="hero">
+      <div><div class="eyebrow"><span class="dot"></span>探索编程 · AI · 创意开发</div>
+        <h1>你好，我是 <span class="gradient">LI</span><span class="second">创造<span class="gradient">数字世界</span></span></h1>
+        <p class="lead">欢迎来到我的个人作品集。我正在学习软件开发，探索人工智能、独立游戏和有趣的数字创作。这里将记录我从想法到作品的每一步。</p>
+        <div class="actions"><a class="btn btn-primary" href="#projects">探索作品 <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="https://github.com/lisuotian2-svg" target="_blank" rel="noopener noreferrer">我的 GitHub ↗</a></div>
+      </div>
+      <div class="orbit" aria-hidden="true"><div class="core">L.</div><span class="satellite s1">⌘</span><span class="satellite s2">✦</span><span class="satellite s3">{ }</span></div>
+    </div></div>
+    <section class="container" id="projects"><div class="section-head"><div><div class="kicker">01 / SELECTED WORK</div><h2>精选项目 <span class="gradient">& 创作方向</span></h2></div><p class="subtitle">下面是用于展示排版的示例卡片，等项目完成后再替换为真实作品和链接。</p></div>
+      <div class="projects">
+        <article class="project"><div class="art art1"><span aria-hidden="true">🐈</span></div><div class="project-body"><span class="label">概念示例 · 未发布</span><h3>桌面宠物计划</h3><p>一款可以陪伴日常工作和学习的桌面角色程序，探索动画、互动和个性化设置。</p><div class="tags"><span>Python</span><span>Desktop</span><span>UI</span></div></div></article>
+        <article class="project"><div class="art art2"><span aria-hidden="true">🎮</span></div><div class="project-body"><span class="label">概念示例 · 未发布</span><h3>像素游戏实验室</h3><p>尝试像素角色、互动场景、关卡设计与有趣的游戏机制。</p><div class="tags"><span>JavaScript</span><span>Game Dev</span><span>Pixel Art</span></div></div></article>
+        <article class="project"><div class="art art3"><span aria-hidden="true">✧</span></div><div class="project-body"><span class="label">概念示例 · 未发布</span><h3>AI 创意工具</h3><p>学习本地 AI 模型、自动化工作流与人机交互，让想法变成工具。</p><div class="tags"><span>AI</span><span>Python</span><span>Automation</span></div></div></article>
+      </div>
+    </section>
+    <section class="container" id="skills"><div class="section-head"><div><div class="kicker">02 / TOOLKIT</div><h2>正在探索的 <span class="gradient">技术方向</span></h2></div><p class="subtitle">持续学习，不以熟练程度排序。</p></div><div class="skills"><div class="skill"><span>🐍</span>Python</div><div class="skill"><span>⚡</span>JavaScript</div><div class="skill"><span>🌐</span>HTML / CSS</div><div class="skill"><span>⌥</span>Git & GitHub</div><div class="skill"><span>✧</span>AI Tools</div><div class="skill"><span>🎮</span>Game Development</div></div></section>
+    <section class="container about" id="about"><div><div class="kicker">03 / ABOUT ME</div><h2>保持好奇，<br/><span class="gradient">持续创造。</span></h2><p>我对软件、游戏和人工智能充满兴趣，喜欢研究一件东西如何运作，也喜欢把新学到的知识变成实际作品。</p><p>这个网站会随着我的学习和项目进度持续更新。每个项目都是一次探索。</p></div><div class="about-visual" aria-label="个性化代码装饰"><div class="code-line"><b>const</b> creator = {</div><div class="code-line">&nbsp; name: <i>"LI"</i>,</div><div class="code-line">&nbsp; interests: [</div><div class="code-line">&nbsp;&nbsp; <i>"Coding"</i>, <i>"AI"</i>,</div><div class="code-line">&nbsp;&nbsp; <i>"Games"</i>, <i>"Design"</i></div><div class="code-line">&nbsp; ],</div><div class="code-line">&nbsp; status: <i>"Learning & Building"</i></div><div class="code-line">};</div><br/><div class="code-line"><b>create</b>(<i>"something amazing"</i>);</div></div></section>
+    <section class="container" id="contact"><div class="contact"><div class="kicker">04 / GET IN TOUCH</div><h2>一起探索更多可能 <span class="gradient">✦</span></h2><p>欢迎通过 GitHub 关注我的代码与作品更新。</p><a class="btn btn-primary" href="https://github.com/lisuotian2-svg" target="_blank" rel="noopener noreferrer">访问我的 GitHub ↗</a></div></section>
+  </main>
+  <footer class="container"><span>© <span id="year">2026</span> LI. Built with curiosity.</span><span>Pure HTML / CSS · Hosted on GitHub Pages</span></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
